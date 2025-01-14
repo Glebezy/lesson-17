@@ -11,10 +11,10 @@ SCHEMA_FILE_DIR = get_dir("schemas")
 
 @allure.epic("Reqres API")
 @allure.feature("/{resource}/{id}")
-@allure.story("GET")
+@allure.story("PUT")
 @allure.tag("API")
 @allure.label("owner", "Gleb T")
-@allure.title("Проверка получения данных существующего пользователя")
+@allure.title("Проверка изменения данных ресурса")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_put_resource_success_validation_schema(base_url):
 
