@@ -1,3 +1,4 @@
 requests~=2.32.3
+allure-pytest
+pytest~=8.3.3
 jsonschema~=4.23.0
-pytest~=8.3.4
