@@ -12,6 +12,8 @@
   <code><img width="5%" title="GitHub" src="images/logo/github.png"></code>
   <code><img width="5%" title="Requests" src="images/logo/requests.png"></code>
   <code><img width="5%" title="Allure Report" src="images/logo/allure_report.png"></code>
+  <code><img width="5%" title="Jenkins" src="images/logo/jenkins.png"></code>
+  <code><img width="5%" title="Telegram" src="images/logo/tg.png"></code>
 </p>
 
 
@@ -25,6 +27,14 @@
 * Регистрация пользователя с невалидными данными
 * Изменение данных ресурса 
 
+<!-- Jenkins -->
+
+### <img width="3%" title="Jenkins" src="images/logo/jenkins.png"> Запуск проекта в Jenkins
+
+### [Job](https://jenkins.autotests.cloud/job/16-glebezy-python-unit17/)
+
+##### При нажатии на "Build Now" начнется сборка тестов и их прохождение, через виртуальную машину в Selenide.
+![This is an image](images/screenshots/jenkins.png)
 
 <!-- Allure report -->
 
@@ -39,3 +49,11 @@
 ##### Во вкладке Behaviors находятся собранные тест кейсы, у которых описаны шаги и приложены логи о прохождении теста
 ![This is an image](images/screenshots/allure_suites.png)
 
+
+
+<!-- Telegram -->
+
+### <img width="3%" title="Telegram" src="images/logo/tg.png"> Интеграция с Telegram
+##### После прохождения тестов, в Telegram-бот приходит сообщение с графиком и небольшой информацией о тестах.
+
+![This is an image](images/screenshots/tg_bot.png)
