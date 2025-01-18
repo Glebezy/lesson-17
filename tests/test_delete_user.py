@@ -22,7 +22,4 @@ def test_delete_user_success_empty_response(base_url):
         assert response.status_code == 204
 
     with allure.step('Проверяем пустой ответ'):
-        if response.content == b'':
-            pass
-        else:
-            pytest.fail('Ответ не пустой.')
+        assert len(response.content) == 0
