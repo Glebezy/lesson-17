@@ -4,7 +4,7 @@ from jsonschema import validate
 import json
 import allure
 from utils.attach import response_attaching, response_logging
-from utils.file import get_dir
+from utils.path_file import get_dir
 
 SCHEMA_FILE_DIR = get_dir("schemas")
 MODEL_FILE_DIR = get_dir("models")
