@@ -1,8 +1,9 @@
-import os
+import json
+
+import allure
 import requests
 from jsonschema import validate
-import json
-import allure
+
 from utils.attach import response_attaching, response_logging
 from utils.path_file import get_dir
 
@@ -25,7 +26,6 @@ class TestPostRegisterUser:
     @allure.title("Проверка регистрации пользователя с валидными данными")
     @allure.severity(allure.severity_level.BLOCKER)
     def test_post_register_success_validation_schema(self, base_url):
-
         with allure.step('Отправляем запрос на регистрацию с валидными данными'):
             response = requests.post(f'{base_url}/register', USER_CREDS)
             response_attaching(response)
@@ -46,7 +46,6 @@ class TestPostRegisterUser:
     @allure.title("Проверка регистрации пользователя с невалидными данными")
     @allure.severity(allure.severity_level.CRITICAL)
     def test_post_register_failure_validation_schema(self, base_url):
-
         with allure.step('Отправляем запрос на регистрацию с невалидными данными'):
             response = requests.post(f'{base_url}/register', USER_CREDS['email'])
             response_attaching(response)

@@ -1,8 +1,9 @@
-import os
+import json
+
+import allure
 import requests
 from jsonschema import validate
-import json
-import allure
+
 from utils.attach import response_attaching, response_logging
 from utils.path_file import get_dir
 
@@ -20,7 +21,6 @@ class TestGetUserById:
     @allure.title("Проверка получения данных существующего пользователя")
     @allure.severity(allure.severity_level.CRITICAL)
     def test_get_user_success_validation_schema(self, base_url):
-
         with allure.step('Отправляем запрос на получение данных существующего пользователя'):
             response = requests.get(f'{base_url}/users/2')
             response_attaching(response)
@@ -41,7 +41,6 @@ class TestGetUserById:
     @allure.title("Проверка получения данных несуществующего пользователя")
     @allure.severity(allure.severity_level.NORMAL)
     def test_get_user_not_found_error_code(self, base_url):
-
         with allure.step('Отправляем запрос на получение данных несуществующего пользователя'):
             response = requests.get(f'{base_url}/users/2940381')
             response_attaching(response)

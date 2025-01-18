@@ -1,9 +1,9 @@
 import json
-import allure
-import requests
-from requests import Response
-from allure_commons.types import AttachmentType
 import logging
+
+import allure
+from allure_commons.types import AttachmentType
+from requests import Response
 
 
 def response_attaching(response: Response):

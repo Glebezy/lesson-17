@@ -1,10 +1,12 @@
+import json
+from datetime import datetime
+
+import allure
 import requests
 from jsonschema import validate
-import json
-import allure
+
 from utils.attach import response_attaching, response_logging
 from utils.path_file import get_dir
-from datetime import datetime
 
 SCHEMA_FILE_DIR = get_dir("schemas")
 
@@ -17,7 +19,6 @@ SCHEMA_FILE_DIR = get_dir("schemas")
 @allure.title("Проверка изменения данных ресурса")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_put_resource_success_validation_schema(base_url):
-
     with allure.step('Отправляем запрос на изменение данных ресурса'):
         response = requests.put(base_url + '/{resource}/{id}')
         response_attaching(response)

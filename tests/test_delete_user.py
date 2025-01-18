@@ -1,6 +1,6 @@
-import pytest
-import requests
 import allure
+import requests
+
 from utils.attach import response_attaching, response_logging
 
 
@@ -12,7 +12,6 @@ from utils.attach import response_attaching, response_logging
 @allure.title("Проверка удаления пользователя")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_delete_user_success_empty_response(base_url):
-
     with allure.step('Отправляем запрос на удаление пользователя'):
         response = requests.delete(f'{base_url}/users/{id}')
         response_attaching(response)
