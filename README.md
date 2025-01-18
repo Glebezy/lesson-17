@@ -8,8 +8,6 @@
   <code><img width="5%" title="Pycharm" src="images/logo/pycharm.png"></code>
   <code><img width="5%" title="Python" src="images/logo/python.png"></code>
   <code><img width="5%" title="Pytest" src="images/logo/pytest.png"></code>
-  <code><img width="5%" title="Selene" src="images/logo/selene.png"></code>
-  <code><img width="5%" title="Selenium" src="images/logo/selenium.png"></code>
   <code><img width="5%" title="GitHub" src="images/logo/github.png"></code>
   <code><img width="5%" title="Requests" src="images/logo/requests.png"></code>
   <code><img width="5%" title="Allure Report" src="images/logo/allure_report.png"></code>
@@ -29,19 +27,31 @@
 * Регистрация пользователя с невалидными данными
 * Изменение данных ресурса
 
+
+### Чем проверяем
+
+* **Requests** для отправки запросов и парсинга ответов
+* **Pytest** для запуска тестов
+* **Jsonschema** для валидации json-схем
+* **Allure** для формирования отчетов и логирования шагов тестов
+        
+
 <!-- Jenkins -->
 
 ### <img width="3%" title="Jenkins" src="images/logo/jenkins.png"> Запуск проекта в Jenkins
 
 ### [Job](https://jenkins.autotests.cloud/job/16-glebezy-python-unit17/)
 
-##### При нажатии на "Build Now" начнется сборка тестов и их прохождение, через виртуальную машину в Selenide.
+##### При нажатии на "Build Now" начнется сборка тестов и их прохождение
 
 ![This is an image](images/screenshots/jenkins.png)
 
 <!-- Allure report -->
 
 ### <img width="3%" title="Allure Report" src="images/logo/allure_report.png"> Allure report
+
+### [Отчет](https://jenkins.autotests.cloud/job/16-glebezy-python-unit17/allure)
+
 
 ##### После прохождения тестов, результаты можно посмотреть в Allure отчете
 
